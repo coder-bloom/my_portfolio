@@ -250,6 +250,7 @@ const formRef = useRef();
                   href={project.github}
                   target="_blank"
                   className="px-4 py-2 text-sm rounded-lg bg-purple-500 hover:scale-105 transition"
+                  rel="noopener noreferrer"
                 >
                   GitHub
                 </a>
@@ -258,6 +259,7 @@ const formRef = useRef();
                   href={project.live}
                   target="_blank"
                   className="px-4 py-2 text-sm rounded-lg border border-blue-400 hover:scale-105 transition"
+                  rel="noopener noreferrer"
                 >
                   Live
                 </a>
