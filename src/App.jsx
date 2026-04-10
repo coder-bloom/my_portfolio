@@ -8,6 +8,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
+
 export default function App() {
   // Create layered starfield (small, medium, big)
   const stars = useMemo(() => {
@@ -63,10 +64,10 @@ const formRef = useRef();
 
     emailjs
       .sendForm(
-        "service_cw7vg9v",
-        "template_3a7v99e",
-        formRef.current,
-        "tmryk4t0BoxRVcr7F"
+        import.meta.env.VITE_SERVICE_ID,
+  import.meta.env.VITE_TEMPLATE_ID,
+  formRef.current,
+  import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
         alert("Message sent successfully 🚀");
