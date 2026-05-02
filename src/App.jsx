@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 import bloodImg from './assets/blood.png';
 import citycareImg from './assets/citycare.png';
@@ -33,7 +33,7 @@ const App = () => {
   e.preventDefault();
   setIsSubmitting(true);
 
- emailjs.sendForm(
+  emailjs.sendForm(
     import.meta.env.VITE_SERVICE_ID,
     import.meta.env.VITE_TEMPLATE_ID,
     e.target,
@@ -42,13 +42,11 @@ const App = () => {
   .then(() => {
     setIsSubmitting(false);
     setSubmitted(true);
-    e.target.reset(); // clears form
-    setTimeout(() => setSubmitted(false), 5000);
+    e.target.reset();
   })
   .catch((error) => {
-    console.error("Email error:", error);
+    console.error(error);
     setIsSubmitting(false);
-    alert("Failed to send message");
   });
 };
 
