@@ -48,22 +48,71 @@ const BloodLinkIllustration = () => (
 );
 
 // High-quality SVG for Job Hunt Project
-const JobHuntIllustration = () => (
-  <svg viewBox="0 0 400 200" className="w-full h-full object-cover bg-gradient-to-br from-violet-950/60 to-neutral-900" xmlns="http://www.w3.org/2000/svg">
+const HumUnityIllustration = () => (
+  <svg
+    viewBox="0 0 400 200"
+    className="w-full h-full object-cover bg-gradient-to-br from-stone-100 to-amber-50"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <defs>
-      <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.7" />
-        <stop offset="100%" stopColor="#4c1d95" stopOpacity="0.2" />
+      <linearGradient id="humGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#c8a96b" stopOpacity="0.8" />
+        <stop offset="100%" stopColor="#6bafad" stopOpacity="0.35" />
       </linearGradient>
     </defs>
-    <rect width="400" height="200" fill="url(#violetGrad)" />
-    {/* Network grid */}
-    <path d="M 50,150 L 150,50 L 250,150 L 350,50" fill="none" stroke="#a78bfa" strokeWidth="2" />
-    <circle cx="150" cy="50" r="7" fill="#c084fc" />
-    <circle cx="350" cy="50" r="7" fill="#c084fc" />
-    <rect x="180" y="110" width="40" height="30" rx="4" fill="#c084fc" opacity="0.9" />
-    <path d="M 195,120 L 205,130 L 210,125" fill="none" stroke="#2e1065" strokeWidth="2" strokeLinecap="round" />
-    <text x="20" y="35" fill="#c084fc" fontFamily="monospace" fontSize="12" letterSpacing="2">JOBS: ACTIVE</text>
+
+    {/* Background */}
+    <rect width="400" height="200" fill="url(#humGrad)" />
+
+    {/* Decorative circles */}
+    <circle cx="70" cy="55" r="20" fill="#ffffff" opacity="0.2" />
+    <circle cx="330" cy="150" r="30" fill="#ffffff" opacity="0.15" />
+
+    {/* Community nodes */}
+    <circle cx="110" cy="90" r="12" fill="#fff" opacity="0.9" />
+    <circle cx="200" cy="60" r="12" fill="#fff" opacity="0.9" />
+    <circle cx="290" cy="90" r="12" fill="#fff" opacity="0.9" />
+    <circle cx="200" cy="135" r="12" fill="#fff" opacity="0.9" />
+
+    {/* Connections */}
+    <line x1="110" y1="90" x2="200" y2="60" stroke="#fff" strokeWidth="2" opacity="0.7" />
+    <line x1="200" y1="60" x2="290" y2="90" stroke="#fff" strokeWidth="2" opacity="0.7" />
+    <line x1="110" y1="90" x2="200" y2="135" stroke="#fff" strokeWidth="2" opacity="0.7" />
+    <line x1="290" y1="90" x2="200" y2="135" stroke="#fff" strokeWidth="2" opacity="0.7" />
+
+    {/* Quote card */}
+    <rect
+      x="135"
+      y="105"
+      width="130"
+      height="45"
+      rx="12"
+      fill="#ffffff"
+      opacity="0.92"
+    />
+
+    <text
+      x="200"
+      y="132"
+      textAnchor="middle"
+      fill="#6bafad"
+      fontFamily="serif"
+      fontSize="26"
+    >
+      ❝
+    </text>
+
+    {/* Title */}
+    <text
+      x="20"
+      y="30"
+      fill="#5c4a32"
+      fontFamily="monospace"
+      fontSize="12"
+      letterSpacing="2"
+    >
+      HUMUNITY • POETRY • COMMUNITY
+    </text>
   </svg>
 );
 
@@ -141,14 +190,23 @@ const App = () => {
       live: "#",
       tech: ["Socket.io", "React", "Node.js", "MUI"]
     },
-    {
-      title: "Job Hunt",
-      illustration: <JobHuntIllustration />, 
-      desc: "A dynamic job portal designed to help users explore and manage applications.",
-      github: "https://github.com/coder-bloom/jobhunt",
-      live: "#",
-      tech: ["MERN Stack", "Redux", "Tailwind CSS"]
-    }
+   {
+  title: "HumUnity",
+  illustration: <HumUnityIllustration />, 
+  desc: "A full-stack poetry and community platform with secure admin authentication, comment moderation, analytics, and a modern responsive design.",
+  github: "https://github.com/coder-bloom/hum-unity-final",
+  live: "https://humunity.org",
+  tech: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "EmailJS",
+    "Netlify",
+    "Render"
+  ]
+}
   ];
 
   // Perfectly mapped categories as requested
